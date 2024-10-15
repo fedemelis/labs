@@ -1,0 +1,11 @@
+# Subscribe to topic "mylight" through the broker on "localhost"
+mosquitto_sub -h localhost -t mylight
+
+# Subscribe to all the topics with a level between "mylight" and "status" through the broker on "localhost"
+mosquitto_sub -h localhost -t mylight/+/status
+
+# Subscribe to all the topics with a parent level as "mylight" through the broker on "localhost"
+mosquitto_sub -h localhost -t mylight/#
+
+# Publish to topic "mylight" the message "A" through the broker on "localhost"
+mosquitto_pub -h localhost -t mylight -m "A"

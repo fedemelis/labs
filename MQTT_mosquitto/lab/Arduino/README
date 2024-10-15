@@ -1,0 +1,17 @@
+## Linux
+sudo apt-get install socat
+
+# MacOS
+brew install socat
+
+# "SOcket CAT" can establish two bidirectional byte streams and transfer data between them.
+socat -d -d pty,raw,echo=0 pty,raw,echo=0
+
+# -d     : flags that enable debug output 
+# pty    : creates a pseudo-terminal, which is like a virtual serial port.
+# raw    : tells socat to pass the data as-is, without any additional processing (i.e., no line buffering or special character interpretation)
+# echo=0 : disables echoing of input characters back to the output. Normally, terminals echo what you type, but with echo=0, input is not shown.
+#
+
+## Windows
+https://freevirtualserialports.com/
